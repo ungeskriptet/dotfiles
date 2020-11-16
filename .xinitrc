@@ -1,7 +1,7 @@
+prime-offload
 dunst &
 dwmblocks &
-picom &
 xautolock -time 5 -locker "slock" &
-feh --bg-fill /usr/share/wallpapers/artixlinux.png
-prime-offload &
-exec dwm
+xrandr --output HDMI1 --left-of eDP1
+feh --bg-fill /usr/share/wallpaper/open-sourcerer.png
+exec dbus-launch --sh-syntax --exit-with-session dwm
