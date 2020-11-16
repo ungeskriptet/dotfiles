@@ -20,3 +20,5 @@ bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
 
 alias startx='startx; sudo prime-switch'
+alias screenrecord='ffmpeg -f x11grab -s 1920x1080 -i $DISPLAY -r 60 -c:v libx264 -crf 0 /mnt/1TB/Videos/Screenrecords/screenrecord-$(date +%F_%H%M%S).mkv'
+alias screenrecord-with-audio='ffmpeg -f x11grab -s 1920x1080 -i $DISPLAY -r 60 -f pulse -i default -c:v libx264 /mnt/1TB/Videos/Screenrecords/screenrecord-$(date +%F_%H%M%S).mkv'
